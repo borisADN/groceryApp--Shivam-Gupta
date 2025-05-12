@@ -1,0 +1,2 @@
+C:/Users/Lenovo-Ideapad/Desktop/FLUTTER/A GITER/groceryApp--Shivam-Gupta/android/app/.cxx/Debug/55mr6r5l/x86/CMakeFiles/edit_cache.dir
+C:/Users/Lenovo-Ideapad/Desktop/FLUTTER/A GITER/groceryApp--Shivam-Gupta/android/app/.cxx/Debug/55mr6r5l/x86/CMakeFiles/rebuild_cache.dir

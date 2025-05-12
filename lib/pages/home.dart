@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceryapp/pages/detailpage.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(top: 50, left: 20,bottom: 20),
+          padding: EdgeInsets.only(top: 50, left: 20, bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -151,48 +152,58 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     SizedBox(width: 20),
-                    Container(
-                      padding: EdgeInsets.only(top: 10, left: 20),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffFfe3e5),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Pomme d\'eden',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailPage(),
                           ),
-                          Text(
-                            '2500 F l\'unité',
-                            style: TextStyle(
-                                color: Colors.black54,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Image.asset('assets/images/apple.png',
-                              height: 150, width: 150, fit: BoxFit.cover),
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            margin: EdgeInsets.only(left: 120),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(30),
-                                topLeft: Radius.circular(20),
+                        );
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(top: 10, left: 20),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Color(0xffFfe3e5),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Pomme d\'eden',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              '2500 F l\'unité',
+                              style: TextStyle(
+                                  color: Colors.black54,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Image.asset('assets/images/apple.png',
+                                height: 150, width: 150, fit: BoxFit.cover),
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              margin: EdgeInsets.only(left: 120),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomRight: Radius.circular(30),
+                                  topLeft: Radius.circular(20),
+                                ),
+                                color: Color(0xffFfeeef),
                               ),
-                              color: Color(0xffFfeeef),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.pink,
+                                size: 30,
+                              ),
                             ),
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.pink,
-                              size: 30,
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     )
                   ],

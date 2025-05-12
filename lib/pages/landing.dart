@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceryapp/pages/home.dart';
 
 class Landing extends StatefulWidget {
   const Landing({Key? key}) : super(key: key);
@@ -48,21 +49,27 @@ class _LandingState extends State<Landing> {
                     color: Color(0xffFFCC3F),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Row(
-                    children: [
-                      Text('Suivant',
-                          style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black)),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.black,
-                      )
-                    ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
+                    },
+                    child: Row(
+                      children: [
+                        Text('Suivant',
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black)),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.black,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
